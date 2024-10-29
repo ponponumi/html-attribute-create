@@ -4,6 +4,18 @@ namespace Ponponumi\HtmlAttributeCreate;
 
 class Create
 {
+    public static function nameCheck(string $name): string
+    {
+        // 名前の命名基準を確認する
+        $check = preg_match('/^[a-zA-Z]/', $name) === 1;
+
+        if($check){
+            return $name;
+        }else{
+            return "";
+        }
+    }
+
     public static function raw(string $input,$check=true): array
     {
         // rawデータを返す
