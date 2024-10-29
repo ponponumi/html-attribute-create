@@ -6,6 +6,8 @@ class Create
 {
     public static function raw(string $input,$check=true): array
     {
-        //
+        $result = [];
+
+        return $result;
     }
 }
