@@ -33,7 +33,19 @@ class Create
             if(str_contains($item,"#")){
                 // IDの場合
                 if($id === ""){
-                    $id = str_replace("#", "", $item);
+                    $idName = str_replace("#", "", $item);
+
+                    if($check){
+                        // 命名基準を確認する場合
+                        $idName = self::nameCheck($idName);
+
+                        if($idName !== ""){
+                            $id = $idName;
+                        }
+                    }else{
+                        // 命名基準を確認しない場合
+                        $id = $idName;
+                    }
                 }
             }else{
                 // クラスの場合
