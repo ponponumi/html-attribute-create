@@ -9,6 +9,7 @@ class Create
         // rawデータを返す
         $input = preg_replace('/[^A-Za-z0-9\-\_\.#]/', '.', $input);
         $input = str_replace("#", ".#", $input);
+        $cleaned = preg_replace('/\.{2,}/', '.', $input);
 
         $result = [];
 
