@@ -15,3 +15,10 @@ var_dump(Create::htmlAttribute("#123hello.hello-world.Hello_World#hello,helloWor
 var_dump(Create::htmlAttribute("#123hello.hello-world.Hello_World#hello,helloWorld123.123Hello",0,2));
 var_dump(Create::htmlAttribute("#123hello.hello-world.Hello_World#hello,helloWorld123.123Hello",0,3));
 var_dump(Create::htmlAttribute("#123hello.hello-world.Hello_World#hello,helloWorld123.123Hello",0,3,false));
+var_dump(Create::nameCheck("123Hello"));
+var_dump(Create::nameCheck("Hello123"));
+var_dump(Create::nameCheck("hello123"));
+var_dump(Create::nameCheck("#hello123"));
+var_dump(Create::nameCheck(".hello123"));
+var_dump(Create::nameCheck("_hello123"));
+var_dump(Create::nameCheck("-hello123"));
