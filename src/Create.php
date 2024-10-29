@@ -91,4 +91,33 @@ class Create
 
         return $result;
     }
+
+    public static function htmlAttribute(string $input,int $spaceMode=0,int $getMode=3,$check=true): string
+    {
+        // HTMLの属性を取得する
+        // spaceModeについて、0はスペースなし、1は前に追加、2は後ろに追加、3は前と後ろに追加、その他は0とみなす
+        // getModeについて、1はIDのみ取得、2はクラスのみ取得、3はIDとクラスを取得、その他は3とみなす
+        $htmlData = self::htmlData($input,$check);
+        $result = "";
+
+        if($getMode === 1){
+            $result = $htmlData["id"];
+        }elseif($getMode === 2){
+            $result = $htmlData["classes"];
+        }else{
+            $result = implode(" ",$htmlData);
+        }
+
+        if($result !== ""){
+            if($spaceMode === 1 || $spaceMode === 3){
+                $result = " " . $result;
+            }
+
+            if($spaceMode === 2 || $spaceMode === 3){
+                $result .= " ";
+            }
+        }
+
+        return $result;
+    }
 }
