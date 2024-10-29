@@ -14,6 +14,9 @@ class Create
 
         $inputList = explode(".", $cleaned);
 
+        $classes = [];
+        $id = "";
+
         $result = [];
 
         return $result;
