@@ -25,6 +25,7 @@ class Create
                 }
             }else{
                 // クラスの場合
+                $classes[] = $item;
             }
         }
 
