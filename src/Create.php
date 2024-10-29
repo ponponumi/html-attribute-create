@@ -20,6 +20,9 @@ class Create
         foreach($inputList as $item){
             if(str_contains($item,"#")){
                 // IDの場合
+                if($id === ""){
+                    $id = str_replace("#", "", $item);
+                }
             }else{
                 // クラスの場合
             }
