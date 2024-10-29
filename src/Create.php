@@ -70,4 +70,25 @@ class Create
 
         return $result;
     }
+
+    public static function htmlData(string $input,$check=true): array
+    {
+        // HTMLのデータを取得する
+        $rawData = self::raw($input,$check);
+
+        $result = [
+            "id" => "",
+            "classes" => "",
+        ];
+
+        if($rawData["id"] !== ""){
+            $result["id"] = 'id="' . $rawData["id"] . '"';
+        }
+
+        if($rawData["classes"] !== []){
+            $result["classes"] = 'class="' . implode(" ", $rawData["classes"]) . '"';
+        }
+
+        return $result;
+    }
 }
