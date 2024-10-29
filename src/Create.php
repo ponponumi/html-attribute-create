@@ -49,7 +49,17 @@ class Create
                 }
             }else{
                 // クラスの場合
-                $classes[] = $item;
+                if($check){
+                    // 命名基準を確認する場合
+                    $className = self::nameCheck($item);
+
+                    if($className !== ""){
+                        $classes[] = $className;
+                    }
+                }else{
+                    // 命名基準を確認しない場合
+                    $classes[] = $item;
+                }
             }
         }
 
