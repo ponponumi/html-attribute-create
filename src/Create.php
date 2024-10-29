@@ -2,7 +2,8 @@
 
 namespace Ponponumi\HtmlAttributeCreate;
 
-class Create{
+class Create
+{
     public static function raw(string $input,$check=true): array
     {
         //
