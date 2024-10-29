@@ -29,7 +29,10 @@ class Create
             }
         }
 
-        $result = [];
+        $result = [
+            "id" => $id,
+            "classes" => $classes,
+        ];
 
         return $result;
     }
