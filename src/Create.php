@@ -12,6 +12,8 @@ class Create
         $cleaned = preg_replace('/\.{2,}/', '.', $input);
         $cleaned = trim($cleaned, '.');
 
+        $inputList = explode(".", $cleaned);
+
         $result = [];
 
         return $result;
