@@ -17,6 +17,14 @@ class Create
         $classes = [];
         $id = "";
 
+        foreach($inputList as $item){
+            if(str_contains($item,"#")){
+                // IDの場合
+            }else{
+                // クラスの場合
+            }
+        }
+
         $result = [];
 
         return $result;
