@@ -14,3 +14,4 @@ var_dump(Create::htmlAttribute("#123hello.hello-world.Hello_World#hello,helloWor
 var_dump(Create::htmlAttribute("#123hello.hello-world.Hello_World#hello,helloWorld123.123Hello",0,1));
 var_dump(Create::htmlAttribute("#123hello.hello-world.Hello_World#hello,helloWorld123.123Hello",0,2));
 var_dump(Create::htmlAttribute("#123hello.hello-world.Hello_World#hello,helloWorld123.123Hello",0,3));
+var_dump(Create::htmlAttribute("#123hello.hello-world.Hello_World#hello,helloWorld123.123Hello",0,3,false));
