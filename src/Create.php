@@ -105,6 +105,10 @@ class Create
         }elseif($getMode === 2){
             $result = $htmlData["classes"];
         }else{
+            $htmlData = array_filter($htmlData, function($value) {
+                return $value !== "";
+            });
+
             $result = implode(" ",$htmlData);
         }
 
